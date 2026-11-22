@@ -1,0 +1,7 @@
+import { INestApplication, ValidationPipe } from '@nestjs/common';
+
+/** Shared by main.ts and the e2e tests so both run with identical pipes and prefix. */
+export function configureApp(app: INestApplication): void {
+  app.setGlobalPrefix('api');
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }));
+}

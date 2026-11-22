@@ -1,0 +1,1 @@
+{ "extends": "./tsconfig.json", "compilerOptions": { "outDir": "dist-demo", "incremental": false, "rootDir": "." }, "include": ["src/**/*", "scripts/**/*", "test/mock-feed.ts"] }
